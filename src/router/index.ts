@@ -13,12 +13,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/dinamic-routes',
     component: AppDinamicRoutes,
-    children: [
-      {
-        path: '/dinamic-routes/car/:id',
-        component: AppCarDinamic,
-      },
-    ],
+    children: [],
   },
   {
     path: '/page2',
