@@ -17,7 +17,7 @@ export default {
     return {
       routerLinks: [
         { id: 2, path: '/', title: 'Задания роутер' },
-        { id: 3, path: '/page1', title: 'Страница 1' },
+        { id: 3, path: '/dinamic-routes', title: 'Динамические роуты' },
         { id: 4, path: '/page2', title: 'Страница 2' },
         { id: 5, path: '/page3', title: 'Страница 3' },
       ],
@@ -52,25 +52,43 @@ export default {
 .router-link__active {
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 0 16px;
+
   transition: all 0.3s;
   font-size: 18px;
 }
 
 .router-link {
-  color: rgb(49, 45, 45);
+  color: white;
 
   &:hover {
-    color: white;
+    text-shadow: 0 0 7px #fff;
   }
 }
 
 .router-link__active {
-  color: white;
+  text-shadow: 0 0 7px #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: white;
+  }
 }
 
 .theme-title {
   text-align: center;
   margin: 16px 0;
+}
+
+.content-wrapper {
+  padding: 16px;
 }
 </style>

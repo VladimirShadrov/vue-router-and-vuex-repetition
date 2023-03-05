@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import AppRouterTasks from '../components/AppRouterTasks.vue';
-import AppPage1 from '../components/AppPage1.vue';
+import AppDinamicRoutes from '../components/AppDinamicRoutes.vue';
+import AppCarDinamic from '../components/AppCarDinamic.vue';
 import AppPage2 from '../components/AppPage2.vue';
 import AppPage3 from '../components/AppPage3.vue';
 
@@ -10,8 +11,14 @@ const routes: Array<RouteRecordRaw> = [
     component: AppRouterTasks,
   },
   {
-    path: '/page1',
-    component: AppPage1,
+    path: '/dinamic-routes',
+    component: AppDinamicRoutes,
+    children: [
+      {
+        path: '/dinamic-routes/car/:id',
+        component: AppCarDinamic,
+      },
+    ],
   },
   {
     path: '/page2',
