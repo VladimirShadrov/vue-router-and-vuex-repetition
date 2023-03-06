@@ -1,14 +1,20 @@
 <template>
   <div class="wrapper">
-    <h1>Автомобиль {{ model }}</h1>
-    <br /><br />
+    <h1>Автомобиль {{}}</h1>
+    <br />
+
     <div class="buttons__wrapper">
       <button @click="backToCars" class="button">Вернуться назад</button>
 
-      <router-link class="button" :to="'/dinamic-routes'">
+      <router-link class="button">
         <button class="button">Показать полную информацию</button>
       </router-link>
     </div>
+    <hr />
+    <br />
+
+    <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
+    <router-view />
   </div>
 </template>
 
@@ -17,11 +23,13 @@ export default {
   name: 'app-car-dinamic',
   data() {
     return {
-      model: this.$route.params['id'],
+      // model: this.$route.params['id'],
+      // params: this.$route.query,
     };
   },
   methods: {
     backToCars() {
+      console.log(this.$route);
       this.$router.push('/dinamic-routes');
     },
   },
@@ -45,6 +53,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 }
 .button {
   padding: 6px 10px;
