@@ -3,7 +3,12 @@
     <h1 class="theme-title">Динамические роуты</h1>
     <br />
 
-    <nav></nav>
+    <nav>
+      <router-link class="link" v-for="car in cars" :key="car.id" active-class="link__active" :to="`/dinamic-routes/car/${car.model}`">{{
+        car.model
+      }}</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
 
