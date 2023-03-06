@@ -4,7 +4,7 @@
     <br />
 
     <div class="buttons__wrapper">
-      <button @click="backToCars" class="button">Вернуться назад</button>
+      <button class="button">Вернуться назад</button>
 
       <router-link class="button">
         <button class="button">Показать полную информацию</button>
@@ -21,23 +21,6 @@
 <script>
 export default {
   name: 'app-car-dinamic',
-  data() {
-    return {
-      // model: this.$route.params['id'],
-      // params: this.$route.query,
-    };
-  },
-  methods: {
-    backToCars() {
-      console.log(this.$route);
-      this.$router.push('/dinamic-routes');
-    },
-  },
-  watch: {
-    $route(to) {
-      this.model = to.params['id'];
-    },
-  },
 };
 </script>
 
