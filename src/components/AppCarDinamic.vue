@@ -4,22 +4,38 @@
     <br />
 
     <div class="buttons__wrapper">
-      <button class="button">Вернуться назад</button>
+      <button @click="backToCarsPage" class="button">Вернуться назад</button>
 
-      <!-- <router-link class="button" >
+      <router-link class="button" :to="{ name: 'fullInfo', query: { model } }">
         <button class="button">Показать полную информацию</button>
-      </router-link> -->
+      </router-link>
     </div>
     <hr />
     <br />
 
     <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
   name: 'app-car-dinamic',
+  data() {
+    return {
+      model: this.$route.params['id'],
+    };
+  },
+  watch: {
+    $route(to) {
+      this.model = to.params['id'];
+    },
+  },
+  methods: {
+    backToCarsPage() {
+      this.$router.push('/dinamic-routes');
+    },
+  },
 };
 </script>
 

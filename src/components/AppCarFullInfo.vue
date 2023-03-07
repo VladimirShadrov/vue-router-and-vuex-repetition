@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <h2>Марка машины: {{}}</h2>
+    <h2>Марка машины: {{ $route.query.model }}</h2>
     <br />
-    <h2>Год выпуска: {{}}</h2>
+    <h2>Год выпуска: {{ 2022 }}</h2>
   </div>
 </template>
 
