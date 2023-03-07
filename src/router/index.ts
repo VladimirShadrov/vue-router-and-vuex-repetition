@@ -6,6 +6,10 @@ import AppCarFullInfo from '../components/AppCarFullInfo.vue';
 import AppPage2 from '../components/AppPage2.vue';
 import AppPage3 from '../components/AppPage3.vue';
 
+type ForScroll = {
+  [key: string]: string;
+};
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -42,6 +46,17 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to: any) {
+    const obj: ForScroll = {
+      el: to.hash,
+    };
+    if (to.hash) {
+      console.log('Hash: ', to.hash);
+      console.log('Obj: ', obj);
+
+      return obj;
+    }
+  },
 });
 
 export default router;
