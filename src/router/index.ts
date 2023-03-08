@@ -5,6 +5,7 @@ import AppCarDinamic from '../components/AppCarDinamic.vue';
 import AppCarFullInfo from '../components/AppCarFullInfo.vue';
 import AppPage2 from '../components/AppPage2.vue';
 import AppPage3 from '../components/AppPage3.vue';
+import App404Page from '../components/App404Page.vue';
 
 // type ForScroll = {
 //   [key: string]: number;
@@ -33,6 +34,7 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+
   {
     path: '/page2',
     component: AppPage2,
@@ -40,6 +42,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/page3',
     component: AppPage3,
+  },
+  {
+    path: '/not',
+    redirect: '/dinamic-routes',
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: App404Page,
   },
 ];
 
