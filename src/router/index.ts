@@ -29,6 +29,10 @@ const routes: Array<RouteRecordRaw> = [
             path: 'full-info',
             component: AppCarFullInfo,
             name: 'fullInfo',
+            // beforeEnter(to, from, next) {
+            //   console.log('Beforeenter');
+            //   next(false);
+            // },
           },
         ],
       },

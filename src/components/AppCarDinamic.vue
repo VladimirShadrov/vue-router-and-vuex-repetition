@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       model: this.$route.params['id'],
+      autorization: true,
     };
   },
   watch: {
@@ -35,6 +36,13 @@ export default {
     backToCarsPage() {
       this.$router.push('/dinamic-routes');
     },
+  },
+  beforeRouteLeave(to, fromR, next) {
+    if (this.autorization) {
+      next();
+    } else {
+      next(false);
+    }
   },
 };
 </script>

@@ -17,6 +17,10 @@
 <script>
 export default {
   name: 'app-car-full-info',
+  beforeRouteEnter(to, from, next) {
+    console.log('Перехожу на страницу с полным описанием');
+    next(false);
+  },
 };
 </script>
 
