@@ -5,9 +5,9 @@
     <div class="scroll1"></div>
 
     <div id="fullInfo" class="wrapper">
-      <h2>Марка машины: {{ $route.query.model }}</h2>
+      <h2>Марка машины: {{}}</h2>
       <br />
-      <h2>Год выпуска: {{ 2022 }}</h2>
+      <h2>Год выпуска: {{}}</h2>
     </div>
 
     <div class="scroll"></div>
@@ -17,9 +17,6 @@
 <script>
 export default {
   name: 'app-car-full-info',
-  beforeRouteEnter(to, from, next) {
-    next(true);
-  },
 };
 </script>
 
