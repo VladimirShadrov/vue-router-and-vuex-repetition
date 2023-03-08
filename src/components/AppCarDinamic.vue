@@ -6,7 +6,7 @@
     <div class="buttons__wrapper">
       <button @click="backToCarsPage" class="button">Вернуться назад</button>
 
-      <router-link class="button" :to="{ name: 'fullInfo', query: { model }, hash: '#scroll' }">
+      <router-link class="button" :to="{ name: 'fullInfo', query: { model } }">
         <button class="button">Показать полную информацию</button>
       </router-link>
     </div>
