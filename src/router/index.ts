@@ -7,9 +7,6 @@ import AppPage2 from '../components/AppPage2.vue';
 import AppPage3 from '../components/AppPage3.vue';
 import App404Page from '../components/App404Page.vue';
 
-const AppCarDinamic = () => import('../components/AppCarDinamic.vue');
-const AppCarFullInfo = () => import('../components/AppCarFullInfo.vue');
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
