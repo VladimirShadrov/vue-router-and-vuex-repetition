@@ -1,45 +1,25 @@
 <template>
   <div class="wrapper">
-    <h1>Автомобиль {{ model }}</h1>
+    <h1>Автомобиль {{}}</h1>
     <br />
 
     <div class="buttons__wrapper">
       <button @click="backToCars" class="button">Вернуться назад</button>
 
-      <router-link class="button" :to="{ name: 'fullInfo', query: { id: model }, meta: { can: false } }">
+      <!-- <router-link class="button" >
         <button class="button">Показать полную информацию</button>
-      </router-link>
+      </router-link> -->
     </div>
     <hr />
     <br />
 
     <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
-    <router-view />
   </div>
 </template>
 
 <script>
 export default {
   name: 'app-car-dinamic',
-  data() {
-    return {
-      model: this.$route.params.id,
-      canDo: true,
-    };
-  },
-  watch: {
-    $route(to) {
-      this.model = to.params.id;
-    },
-  },
-  methods: {
-    backToCars() {
-      this.$router.push('/dinamic-routes');
-    },
-  },
-  beforeRouteLeave(to, from, next) {
-    next(this.canDo);
-  },
 };
 </script>
 

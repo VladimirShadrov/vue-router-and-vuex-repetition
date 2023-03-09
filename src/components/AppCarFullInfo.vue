@@ -1,16 +1,13 @@
 <template>
   <div>
     <!-- ЗДЕСЬ ДОБАВИТЬ КНОПКУ ПРОКРУТКИ -->
-    <router-link class="button" :to="{ name: 'fullInfo', hash: '#fullInfo', query: { id: $route.query.id } }">
-      <button class="button">Прокрутить к элементу</button>
-    </router-link>
 
     <div class="scroll1"></div>
 
     <div id="fullInfo" class="wrapper">
-      <h2>Марка машины: {{ $route.query.id }}</h2>
+      <h2>Марка машины: {{}}</h2>
       <br />
-      <h2>Год выпуска: {{ 2014 }}</h2>
+      <h2>Год выпуска: {{}}</h2>
     </div>
 
     <div class="scroll"></div>
