@@ -5,7 +5,7 @@ import AppDinamicRoutes from '../components/AppDinamicRoutes.vue';
 // import AppCarFullInfo from '../components/AppCarFullInfo.vue';
 import AppPage2 from '../components/AppPage2.vue';
 import AppPage3 from '../components/AppPage3.vue';
-import App404Page from '../components/App404Page.vue';
+// import App404Page from '../components/App404Page.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,20 +16,6 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/dinamic-routes',
     component: AppDinamicRoutes,
-    children: [
-      {
-        path: 'cars/:id',
-        component: () => import('../components/AppCarDinamic.vue'),
-        name: 'cars',
-        children: [
-          {
-            path: 'fullInfo',
-            component: () => import('../components/AppCarFullInfo.vue'),
-            name: 'fullInfo',
-          },
-        ],
-      },
-    ],
   },
   {
     path: '/page2',
@@ -39,29 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/page3',
     component: AppPage3,
   },
-  {
-    path: '/not',
-    redirect: '/dinamic-routes',
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    component: App404Page,
-  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
-      return { el: to.hash, behavior: 'smooth' };
-    }
-
-    return {
-      left: 0,
-      top: 0,
-    };
-  },
 });
 
 export default router;
