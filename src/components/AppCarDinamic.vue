@@ -6,7 +6,7 @@
     <div class="buttons__wrapper">
       <button @click="backToCars" class="button">Вернуться назад</button>
 
-      <router-link class="button" :to="{ name: 'fullInfo', query: { model: $route.query['model'], year: $route.query['year'] }, hash: '#fullInfo' }">
+      <router-link class="button" :to="{ name: 'fullInfo', query: { model: $route.query['model'], year: $route.query['year'] } }">
         <button class="button">Показать полную информацию</button>
       </router-link>
     </div>
@@ -24,12 +24,19 @@ export default {
   data() {
     return {
       id: this.$route.params['id'],
+      autoris: false,
     };
   },
   methods: {
     backToCars() {
       this.$router.push('/dinamic-routes');
     },
+  },
+  beforeRouteEnter(to, fromR, next) {
+    next();
+  },
+  beforeRouteLeave(to, fromR, next) {
+    next(this.autoris);
   },
 };
 </script>

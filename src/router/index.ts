@@ -11,6 +11,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     component: AppRouterTasks,
+    name: 'main',
   },
   {
     path: '/dinamic-routes',
@@ -37,6 +38,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/page3',
     component: AppPage3,
+  },
+  {
+    path: '/not',
+    redirect: '/dinamic-routes',
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: App404Page,
   },
 ];
 

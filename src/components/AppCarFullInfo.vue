@@ -1,6 +1,9 @@
 <template>
   <div>
     <!-- ЗДЕСЬ ДОБАВИТЬ КНОПКУ ПРОКРУТКИ -->
+    <router-link class="button" :to="{ name: 'fullInfo', hash: '#fullInfo' }">
+      <button class="button">Прокрутить до элемента</button>
+    </router-link>
 
     <div class="scroll1"></div>
 
@@ -24,6 +27,9 @@ export default {
     year() {
       return this.$route.query['year'];
     },
+  },
+  beforeRouteEnter(to, fromR, next) {
+    next(true);
   },
 };
 </script>
