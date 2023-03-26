@@ -6,14 +6,15 @@
     <div class="buttons__wrapper">
       <button @click="backToCars" class="button">Вернуться назад</button>
 
-      <!-- <router-link class="button" >
+      <router-link class="button" :to="{ name: 'fullInfo', params: { id: $route.params['id'] } }">
         <button class="button">Показать полную информацию</button>
-      </router-link> -->
+      </router-link>
     </div>
     <hr />
     <br />
 
     <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
+    <router-view></router-view>
   </div>
 </template>
 

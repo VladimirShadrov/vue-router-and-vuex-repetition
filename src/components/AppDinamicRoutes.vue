@@ -4,7 +4,7 @@
     <br />
 
     <nav>
-      <router-link class="link" active-class="link__active" v-for="car in cars" :key="car['id']" :to="`/dinamic-routes/cars/${car.model}`">{{
+      <router-link class="link" active-class="link__active" v-for="car in cars" :key="car['id']" :to="{ name: 'cars', params: { id: car.model } }">{{
         car.model
       }}</router-link>
     </nav>
