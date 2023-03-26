@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       id: this.$route.params['id'],
-      autoris: false,
+      autoris: true,
     };
   },
   methods: {
