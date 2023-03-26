@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>Автомобиль {{}}</h1>
+    <h1>Автомобиль {{ $route.params['id'] }}</h1>
     <br />
 
     <div class="buttons__wrapper">
@@ -20,6 +20,11 @@
 <script>
 export default {
   name: 'app-car-dinamic',
+  methods: {
+    backToCars() {
+      this.$router.push('/dinamic-routes');
+    },
+  },
 };
 </script>
 
