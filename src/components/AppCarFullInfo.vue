@@ -5,9 +5,9 @@
     <div class="scroll1"></div>
 
     <div id="fullInfo" class="wrapper">
-      <h2>Марка машины: {{ $route.params['id'] }}</h2>
+      <h2>Марка машины: {{ model }}</h2>
       <br />
-      <h2>Год выпуска: {{ $route.params['year'] }}</h2>
+      <h2>Год выпуска: {{ year }}</h2>
     </div>
 
     <div class="scroll"></div>
@@ -17,6 +17,14 @@
 <script>
 export default {
   name: 'app-car-full-info',
+  computed: {
+    model() {
+      return this.$route.query['model'];
+    },
+    year() {
+      return this.$route.query['year'];
+    },
+  },
 };
 </script>
 

@@ -4,9 +4,14 @@
     <br />
 
     <nav>
-      <router-link class="link" active-class="link__active" v-for="car in cars" :key="car['id']" :to="{ name: 'cars', params: { id: car.model } }">{{
-        car.model
-      }}</router-link>
+      <router-link
+        class="link"
+        active-class="link__active"
+        v-for="car in cars"
+        :key="car['id']"
+        :to="{ name: 'cars', params: { id: car.model }, query: { model: car['model'], year: car['year'] } }"
+        >{{ car.model }}</router-link
+      >
     </nav>
     <router-view></router-view>
   </div>
