@@ -1,6 +1,9 @@
 <template>
   <div>
     <!-- ЗДЕСЬ ДОБАВИТЬ КНОПКУ ПРОКРУТКИ -->
+    <router-link class="button" :to="{ hash: '#fullInfo' }">
+      <button class="button">Прокрутить к элементу</button>
+    </router-link>
 
     <div class="scroll1"></div>
 
