@@ -16,20 +16,6 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/dinamic-routes',
     component: AppDinamicRoutes,
-    children: [
-      {
-        path: 'cars/:id',
-        component: () => import('../components/AppCarDinamic.vue'),
-        name: 'cars',
-        children: [
-          {
-            path: 'fullInfo',
-            component: () => import('../components/AppCarFullInfo.vue'),
-            name: 'fullInfo',
-          },
-        ],
-      },
-    ],
   },
   {
     path: '/page2',
@@ -39,27 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/page3',
     component: AppPage3,
   },
-  {
-    path: '/not',
-    redirect: '/',
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    component: App404Page,
-  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth',
-      };
-    }
-  },
 });
 
 export default router;
