@@ -21,6 +21,13 @@ const routes: Array<RouteRecordRaw> = [
         path: 'cars/:id',
         component: () => import('../components/AppCarDinamic.vue'),
         name: 'cars',
+        children: [
+          {
+            path: 'fullInfo',
+            component: () => import('../components/AppCarFullInfo.vue'),
+            name: 'fullInfo',
+          },
+        ],
       },
     ],
   },

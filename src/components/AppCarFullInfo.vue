@@ -5,9 +5,9 @@
     <div class="scroll1"></div>
 
     <div id="fullInfo" class="wrapper">
-      <h2>Марка машины: {{}}</h2>
+      <h2>Марка машины: {{ $route.query['model'] }}</h2>
       <br />
-      <h2>Год выпуска: {{}}</h2>
+      <h2>Год выпуска: {{ $route.query['year'] }}</h2>
     </div>
 
     <div class="scroll"></div>

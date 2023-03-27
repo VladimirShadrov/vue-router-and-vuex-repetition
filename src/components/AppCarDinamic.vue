@@ -6,14 +6,15 @@
     <div class="buttons__wrapper">
       <button @click="back" class="button">Вернуться назад</button>
 
-      <!-- <router-link class="button" >
+      <router-link class="button" :to="{ name: 'fullInfo', query: { model: $route.query['model'], year: $route.query['year'] } }">
         <button class="button">Показать полную информацию</button>
-      </router-link> -->
+      </router-link>
     </div>
     <hr />
     <br />
 
     <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
+    <router-view></router-view>
   </div>
 </template>
 
