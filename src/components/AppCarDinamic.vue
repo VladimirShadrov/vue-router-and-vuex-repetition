@@ -27,6 +27,9 @@ export default {
       this.$router.push('/dinamic-routes');
     },
   },
+  beforeRouteLeave(to, from, next) {
+    next();
+  },
 };
 </script>
 

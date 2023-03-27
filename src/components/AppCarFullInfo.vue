@@ -20,6 +20,9 @@
 <script>
 export default {
   name: 'app-car-full-info',
+  beforeRouteEnter(to, from, next) {
+    next();
+  },
 };
 </script>
 
