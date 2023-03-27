@@ -6,6 +6,7 @@
     <div class="buttons__wrapper">
       <button @click="back" class="button">Вернуться назад</button>
 
+      <!-- СЮДА ДОБАВИТЬ КНОПКУ "ПОКАЗАТЬ ПОЛНУЮ ИНФОРМАЦИЮ" -->
       <router-link class="button" :to="{ name: 'fullInfo', query: { model: $route.query['model'], year: $route.query['year'] } }">
         <button class="button">Показать полную информацию</button>
       </router-link>
