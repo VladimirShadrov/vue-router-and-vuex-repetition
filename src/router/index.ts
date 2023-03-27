@@ -16,6 +16,13 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/dinamic-routes',
     component: AppDinamicRoutes,
+    children: [
+      {
+        path: 'cars/:id',
+        component: () => import('../components/AppCarDinamic.vue'),
+        name: 'cars',
+      },
+    ],
   },
   {
     path: '/page2',
