@@ -1,35 +1,23 @@
 <template>
   <div class="wrapper">
-    <h1>Автомобиль {{ $route.params['id'] }}</h1>
+    <h1>Автомобиль {{}}</h1>
     <br />
 
     <div class="buttons__wrapper">
-      <button @click="back" class="button">Вернуться назад</button>
+      <button class="button">Вернуться назад</button>
 
       <!-- СЮДА ДОБАВИТЬ КНОПКУ "ПОКАЗАТЬ ПОЛНУЮ ИНФОРМАЦИЮ" -->
-      <router-link class="button" :to="{ name: 'fullInfo', query: { model: $route.query['model'], year: $route.query['year'] } }">
-        <button class="button">Показать полную информацию</button>
-      </router-link>
     </div>
     <hr />
     <br />
 
     <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app-car-dinamic',
-  methods: {
-    back() {
-      this.$router.push('/dinamic-routes');
-    },
-  },
-  beforeRouteLeave(to, from, next) {
-    next();
-  },
 };
 </script>
 

@@ -3,17 +3,7 @@
     <h1 class="theme-title">Динамические роуты</h1>
     <br />
 
-    <nav>
-      <router-link
-        class="link"
-        active-class="link__active"
-        v-for="car in cars"
-        :to="{ name: 'cars', params: { id: car.model }, query: { model: car.model, year: car.year } }"
-        :key="car.id"
-        >{{ car.model }}</router-link
-      >
-    </nav>
-    <router-view />
+    <nav></nav>
   </div>
 </template>
 
