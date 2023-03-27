@@ -5,7 +5,7 @@ import AppDinamicRoutes from '../components/AppDinamicRoutes.vue';
 // import AppCarFullInfo from '../components/AppCarFullInfo.vue';
 import AppPage2 from '../components/AppPage2.vue';
 import AppPage3 from '../components/AppPage3.vue';
-import App404Page from '../components/App404Page.vue';
+// import App404Page from '../components/App404Page.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -38,6 +38,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/page3',
     component: AppPage3,
+  },
+  {
+    path: '/not',
+    redirect: '/',
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('../components/App404Page.vue'),
   },
 ];
 
