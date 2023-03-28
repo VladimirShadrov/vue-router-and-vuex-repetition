@@ -12,6 +12,7 @@ import App404Page from '../components/vueRouter/App404Page.vue';
  * COMPOSITION API
  */
 import AppCompositionApi from '../components/composition/AppCompositionApi.vue';
+import AppSetup from '../components/composition/pages/AppSetup.vue';
 
 /**
  *
@@ -31,6 +32,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/composition',
     component: AppCompositionApi,
+    name: 'composition',
+    children: [
+      {
+        path: 'setup',
+        component: AppSetup,
+        name: 'setup',
+      },
+    ],
   },
   {
     path: '/page3',
