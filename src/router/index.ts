@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import AppRouterTasks from '../components/AppRouterTasks.vue';
-import AppDinamicRoutes from '../components/AppDinamicRoutes.vue';
-// import AppCarDinamic from '../components/AppCarDinamic.vue';
-// import AppCarFullInfo from '../components/AppCarFullInfo.vue';
-import AppPage2 from '../components/AppPage2.vue';
-import AppPage3 from '../components/AppPage3.vue';
-// import App404Page from '../components/App404Page.vue';
+import AppRouterTasks from '../components/router/AppRouterTasks.vue';
+import AppDinamicRoutes from '../components/router/AppDinamicRoutes.vue';
+import AppCarDinamic from '../components/router/AppCarDinamic.vue';
+import AppCarFullInfo from '../components/router/AppCarFullInfo.vue';
+import AppPage2 from '../components/router/AppPage2.vue';
+import AppPage3 from '../components/router/AppPage3.vue';
+import App404Page from '../components/router/App404Page.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
