@@ -1,6 +1,6 @@
 <template>
   <div class="content-wrapper">
-    <h1 class="theme-title">Страница 2</h1>
+    <h1 class="theme-title">Composition API</h1>
   </div>
 </template>
 

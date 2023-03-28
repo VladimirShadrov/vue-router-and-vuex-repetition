@@ -18,7 +18,7 @@ export default {
       routerLinks: [
         { id: 2, path: '/', title: 'Задания роутер' },
         { id: 3, path: '/dinamic-routes', title: 'Динамические роуты' },
-        { id: 4, path: '/page2', title: 'Страница 2' },
+        { id: 4, path: '/composition', title: 'Composition API' },
         { id: 5, path: '/page3', title: 'Страница 3' },
       ],
     };
