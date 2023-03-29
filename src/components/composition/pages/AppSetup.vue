@@ -15,10 +15,10 @@
     <br />
 
     <div class="item">
-      Название: <b> {{ title }} </b>
+      Название: <b> {{}} </b>
     </div>
     <div class="item">
-      Версия: <b> {{ version }} </b>
+      Версия: <b> {{}} </b>
     </div>
     <br />
 
@@ -27,16 +27,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const title = ref('Vue');
-    const version = ref('3');
-
-    return { title, version };
-  },
-};
+export default {};
 </script>
 
 <style scoped>

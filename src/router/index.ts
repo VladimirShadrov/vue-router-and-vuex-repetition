@@ -13,6 +13,7 @@ import App404Page from '../components/vueRouter/App404Page.vue';
  */
 import AppCompositionApi from '../components/composition/AppCompositionApi.vue';
 import AppSetup from '../components/composition/pages/AppSetup.vue';
+import AppMethods from '../components/composition/pages/AppMethods.vue';
 
 /**
  *
@@ -38,6 +39,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'setup',
         component: AppSetup,
         name: 'setup',
+      },
+      {
+        path: 'methods',
+        component: AppMethods,
+        name: 'methods',
       },
     ],
   },

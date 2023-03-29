@@ -23,6 +23,10 @@ export default {
           theme: 'Setup и Ref',
           to: { name: 'setup' },
         },
+        {
+          theme: 'Работа с функциями',
+          to: { name: 'methods' },
+        },
       ],
     };
   },
