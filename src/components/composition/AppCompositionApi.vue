@@ -27,6 +27,10 @@ export default {
           theme: 'Работа с функциями',
           to: { name: 'methods' },
         },
+        {
+          theme: 'Объекты и реактивность',
+          to: { name: 'reactive-objects' },
+        },
       ],
     };
   },

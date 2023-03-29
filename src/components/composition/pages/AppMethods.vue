@@ -15,32 +15,21 @@
     <br />
 
     <div class="item">
-      Название: <b> {{ title }} </b>
+      Название: <b> {{}} </b>
     </div>
     <div class="item">
-      Версия: <b> {{ version }} </b>
+      Версия: <b> {{}} </b>
     </div>
     <br />
 
-    <button @click="changeTitle" class="button">Изменить</button>
+    <button class="button">Изменить</button>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue';
 
-export default {
-  setup() {
-    const title = ref('Vue');
-    const version = ref('3');
-    function changeTitle() {
-      title.value = 'React';
-      version.value = '18';
-    }
-
-    return { title, version, changeTitle };
-  },
-};
+export default {};
 </script>
 
 <style scoped>

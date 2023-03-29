@@ -14,6 +14,7 @@ import App404Page from '../components/vueRouter/App404Page.vue';
 import AppCompositionApi from '../components/composition/AppCompositionApi.vue';
 import AppSetup from '../components/composition/pages/AppSetup.vue';
 import AppMethods from '../components/composition/pages/AppMethods.vue';
+import AppObjects from '../components/composition/pages/AppObjects.vue';
 
 /**
  *
@@ -44,6 +45,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'methods',
         component: AppMethods,
         name: 'methods',
+      },
+      {
+        path: 'reactive-objects',
+        component: AppObjects,
+        name: 'reactive-objects',
       },
     ],
   },
