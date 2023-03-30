@@ -15,6 +15,7 @@ import AppCompositionApi from '../components/composition/AppCompositionApi.vue';
 import AppSetup from '../components/composition/pages/AppSetup.vue';
 import AppMethods from '../components/composition/pages/AppMethods.vue';
 import AppObjects from '../components/composition/pages/AppObjects.vue';
+import AppComputed from '../components/composition/pages/AppComputed.vue';
 
 /**
  *
@@ -50,6 +51,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'reactive-objects',
         component: AppObjects,
         name: 'reactive-objects',
+      },
+      {
+        path: 'computed',
+        component: AppComputed,
+        name: 'computed',
       },
     ],
   },

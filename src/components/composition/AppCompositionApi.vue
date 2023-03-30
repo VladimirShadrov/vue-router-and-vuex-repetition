@@ -31,6 +31,10 @@ export default {
           theme: 'Объекты и реактивность',
           to: { name: 'reactive-objects' },
         },
+        {
+          theme: 'Computed свойства',
+          to: { name: 'computed' },
+        },
       ],
     };
   },
