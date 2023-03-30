@@ -43,6 +43,10 @@ export default {
           theme: 'Доступ к Dom элементам',
           to: { name: 'dom' },
         },
+        {
+          theme: 'v-model',
+          to: { name: 'v-model' },
+        },
       ],
     };
   },

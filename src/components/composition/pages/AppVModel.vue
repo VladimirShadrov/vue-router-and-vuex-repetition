@@ -1,11 +1,11 @@
 <template>
-  <h1 class="theme-title">Watch</h1>
+  <h1 class="theme-title">V-Model</h1>
   <hr />
   <br />
   <h3>
     Задача: <br />
-    - Реализовать метод watch, который следит за computed свойством <br />
-    - При изменении свойства computed вывести в консоль новое и старое значение свойства, которое вычисляет computed <br />
+    - Связать текстовый input с моделью <br />
+    - С помощью Watch вывести в консоль значение, введенное в input <br />
   </h3>
   <br />
   <hr />
@@ -28,18 +28,20 @@
       Удвоенная версия: <b> {{ dubleVersion }} </b>
     </div>
     <br />
+    <input v-model="textInp" type="text" placeholder="Связать с v-model" style="padding: 4px 8px" /><br /><br />
 
     <button @click="changeFrame" class="button">Изменить</button>
   </div>
 </template>
 
 <script>
-import { ref, reactive, computed } from 'vue';
+import { ref, reactive, computed, watch } from 'vue';
 
 export default {
   setup() {
     const title = ref('Vue');
     const version = ref(3);
+    const textInp = ref('');
 
     const dubleVersion = computed(() => version.value * 2);
     const newFrame = reactive({
@@ -52,11 +54,14 @@ export default {
       version.value = newFrame.version;
     }
 
+    watch(textInp, (newValue, old) => console.log(newValue, old));
+
     return {
       title,
       version,
       dubleVersion,
       changeFrame,
+      textInp,
     };
   },
 };
