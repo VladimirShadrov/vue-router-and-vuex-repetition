@@ -39,6 +39,10 @@ export default {
           theme: 'Watch',
           to: { name: 'watch' },
         },
+        {
+          theme: 'Доступ к Dom элементам',
+          to: { name: 'dom' },
+        },
       ],
     };
   },
