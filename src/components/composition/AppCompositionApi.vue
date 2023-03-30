@@ -35,6 +35,10 @@ export default {
           theme: 'Computed свойства',
           to: { name: 'computed' },
         },
+        {
+          theme: 'Watch',
+          to: { name: 'watch' },
+        },
       ],
     };
   },

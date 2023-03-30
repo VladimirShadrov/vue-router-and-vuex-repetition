@@ -16,6 +16,7 @@ import AppSetup from '../components/composition/pages/AppSetup.vue';
 import AppMethods from '../components/composition/pages/AppMethods.vue';
 import AppObjects from '../components/composition/pages/AppObjects.vue';
 import AppComputed from '../components/composition/pages/AppComputed.vue';
+import AppWatch from '../components/composition/pages/AppWatch.vue';
 
 /**
  *
@@ -56,6 +57,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'computed',
         component: AppComputed,
         name: 'computed',
+      },
+      {
+        path: 'watch',
+        component: AppWatch,
+        name: 'watch',
       },
     ],
   },
