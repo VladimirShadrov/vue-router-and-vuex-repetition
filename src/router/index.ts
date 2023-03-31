@@ -19,6 +19,7 @@ import AppComputed from '../components/composition/pages/AppComputed.vue';
 import AppWatch from '../components/composition/pages/AppWatch.vue';
 import AppDom from '../components/composition/pages/AppDom.vue';
 import AppVModel from '../components/composition/pages/AppVModel.vue';
+import AppProps from '../components/composition/pages/AppProps.vue';
 
 /**
  *
@@ -74,6 +75,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'v-model',
         component: AppVModel,
         name: 'v-model',
+      },
+      {
+        path: 'props',
+        component: AppProps,
+        name: 'props',
       },
     ],
   },

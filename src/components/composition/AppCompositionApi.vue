@@ -47,6 +47,10 @@ export default {
           theme: 'v-model',
           to: { name: 'v-model' },
         },
+        {
+          theme: 'Props',
+          to: { name: 'props' },
+        },
       ],
     };
   },
