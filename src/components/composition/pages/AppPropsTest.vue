@@ -6,27 +6,19 @@
     <br />
 
     <div class="item">
-      Название: <b> {{ title }} </b>
+      Название: <b> {{}} </b>
     </div>
     <div class="item">
-      Версия: <b> {{ version }}.</b>
+      Версия: <b> {{}}.</b>
     </div>
     <div class="item">
-      Удвоенная версия: <b> {{ dubleVersion }} </b>
+      Удвоенная версия: <b> {{}} </b>
     </div>
   </div>
 </template>
 
 <script>
-import { computed } from 'vue';
-export default {
-  props: ['title', 'version'],
-  setup(props) {
-    const dubleVersion = computed(() => props.version * 2);
-
-    return { dubleVersion };
-  },
-};
+export default {};
 </script>
 
 <style></style>

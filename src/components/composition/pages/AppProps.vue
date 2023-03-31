@@ -34,12 +34,10 @@
 
     <button @click="changeFrame" class="button">Изменить</button>
   </div>
-  <app-props-test :title="title" :version="version"></app-props-test>
 </template>
 
 <script>
 import { ref, reactive, computed } from 'vue';
-import AppPropsTest from './AppPropsTest.vue';
 
 export default {
   setup() {
@@ -64,7 +62,6 @@ export default {
       changeFrame,
     };
   },
-  components: { AppPropsTest },
 };
 </script>
 
