@@ -1,13 +1,15 @@
 <template>
-  <h1 class="theme-title">Передача параметров компоненту</h1>
+  <h1 class="theme-title">Передача параметров от дочерего компонента</h1>
   <hr />
   <br />
   <h3>
-    Компонент: AppProps.vue <br /><br />
+    Компонент: AppEmit.vue <br /><br />
     Задача: <br />
-    - В компонент AppTest передать параметры (название и версию фреймворка) <br />
+    - Отрисовать компонент AppTest здесь<br />
+    - Передать в него параметры (название и версию фреймворка) <br />
     - В компоненте AppTest с помощью computed свойства расчитать удвоенную версию фреймворка <br />
     - При изменении параметров здесь, в тестовом компоненте значения тоже должны поменяться <br />
+    - В компоненте AppTest при клике на кнопку "Вернуть обратно" вернуть название фреймворки и его версию к исходным значениям <br />
   </h3>
   <br />
   <hr />
@@ -34,12 +36,17 @@
 
     <button @click="changeFrame" class="button">Изменить</button>
   </div>
+
+  <!-- ЗДЕСЬ ДОБАВИТЬ ТЕСТОВЫЙ КОМПОНЕНТ -->
+  <app-test :title="title" :version="version" @return-olg-title="returnOldFrame"></app-test>
 </template>
 
 <script>
 import { ref, reactive, computed } from 'vue';
+import AppTest from './AppTest.vue';
 
 export default {
+  components: { AppTest },
   setup() {
     const title = ref('Vue');
     const version = ref(3);
@@ -49,6 +56,12 @@ export default {
       title: 'React',
       version: 18,
     });
+
+    function returnOldFrame(e) {
+      console.log(e);
+      title.value = e.title;
+      version.value = e.version;
+    }
 
     function changeFrame() {
       title.value = newFrame.title;
@@ -60,6 +73,7 @@ export default {
       version,
       dubleVersion,
       changeFrame,
+      returnOldFrame,
     };
   },
 };

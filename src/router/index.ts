@@ -20,6 +20,7 @@ import AppWatch from '../components/composition/pages/AppWatch.vue';
 import AppDom from '../components/composition/pages/AppDom.vue';
 import AppVModel from '../components/composition/pages/AppVModel.vue';
 import AppProps from '../components/composition/pages/AppProps.vue';
+import AppEmit from '../components/composition/pages/AppEmit.vue';
 
 /**
  *
@@ -80,6 +81,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'props',
         component: AppProps,
         name: 'props',
+      },
+      {
+        path: 'emit',
+        component: AppEmit,
+        name: 'emit',
       },
     ],
   },

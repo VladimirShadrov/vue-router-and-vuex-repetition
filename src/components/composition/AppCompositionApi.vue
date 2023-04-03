@@ -51,6 +51,10 @@ export default {
           theme: 'Props',
           to: { name: 'props' },
         },
+        {
+          theme: 'Emit',
+          to: { name: 'emit' },
+        },
       ],
     };
   },
