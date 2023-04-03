@@ -6,36 +6,22 @@
     <br />
 
     <div class="item">
-      Название: <b> {{ title }} </b>
+      Название: <b> {{}} </b>
     </div>
     <div class="item">
-      Версия: <b> {{ version }}.</b>
+      Версия: <b> {{}}.</b>
     </div>
     <div class="item">
-      Удвоенная версия: <b> {{ dubleVer }} </b>
+      Удвоенная версия: <b> {{}} </b>
     </div>
     <br /><br />
 
-    <button @click="backTitle" class="button">Вернуть старые значения</button>
+    <button class="button">Вернуть старые значения</button>
   </div>
 </template>
 
 <script>
-import { computed } from 'vue';
-
-export default {
-  props: ['title', 'version'],
-  setup(props, context) {
-    function back() {
-      context.emit('return-olg-title', { title: 'Vue', version: 3 });
-    }
-    const dubleVer = computed(() => props.version * 2);
-    return {
-      backTitle: back,
-      dubleVer,
-    };
-  },
-};
+export default {};
 </script>
 
 <style scoped>

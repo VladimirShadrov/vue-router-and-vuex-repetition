@@ -23,60 +23,25 @@
     <br />
 
     <div class="item">
-      Название: <b> {{ title }} </b>
+      Название: <b> {{}} </b>
     </div>
     <div class="item">
-      Версия: <b> {{ version }}.</b>
+      Версия: <b> {{}}.</b>
     </div>
     <div class="item">
-      Удвоенная версия: <b> {{ dubleVersion }} </b>
+      Удвоенная версия: <b> {{}} </b>
     </div>
     <br />
     <input type="text" placeholder="Связать с v-model" style="padding: 4px 8px" /><br /><br />
 
-    <button @click="changeFrame" class="button">Изменить</button>
+    <button class="button">Изменить</button>
   </div>
 
   <!-- ЗДЕСЬ ДОБАВИТЬ ТЕСТОВЫЙ КОМПОНЕНТ -->
-  <app-test :title="title" :version="version" @return-olg-title="returnOldFrame"></app-test>
 </template>
 
 <script>
-import { ref, reactive, computed } from 'vue';
-import AppTest from './AppTest.vue';
-
-export default {
-  components: { AppTest },
-  setup() {
-    const title = ref('Vue');
-    const version = ref(3);
-
-    const dubleVersion = computed(() => version.value * 2);
-    const newFrame = reactive({
-      title: 'React',
-      version: 18,
-    });
-
-    function returnOldFrame(e) {
-      console.log(e);
-      title.value = e.title;
-      version.value = e.version;
-    }
-
-    function changeFrame() {
-      title.value = newFrame.title;
-      version.value = newFrame.version;
-    }
-
-    return {
-      title,
-      version,
-      dubleVersion,
-      changeFrame,
-      returnOldFrame,
-    };
-  },
-};
+export default {};
 </script>
 
 <style scoped>
