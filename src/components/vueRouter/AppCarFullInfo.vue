@@ -2,6 +2,10 @@
   <div>
     <!-- ЗДЕСЬ ДОБАВИТЬ КНОПКУ ПРОКРУТКИ -->
 
+    <router-link class="button" :to="{ name: 'fullInfo', query: { model: model, year: year }, hash: '#fullInfo' }">
+      <button class="button">Прокрутить к элементу</button>
+    </router-link>
+
     <div class="scroll1"></div>
 
     <div id="fullInfo" class="wrapper">
@@ -25,8 +29,9 @@ export default {
       return this.$route.query['year'];
     },
   },
-  mounted() {
-    console.log('Route: ', this.$route);
+  beforeRouteEnter(to, from, next) {
+    const ddd = true;
+    next(ddd);
   },
 };
 </script>

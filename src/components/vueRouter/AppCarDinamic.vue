@@ -35,6 +35,10 @@ export default {
       return this.$route.query['year'];
     },
   },
+  beforeRouteLeave(to, fromR, next) {
+    const ccc = true;
+    next(ccc);
+  },
 };
 </script>
 
