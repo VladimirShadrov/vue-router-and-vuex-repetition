@@ -4,16 +4,18 @@
     <br />
 
     <div class="buttons__wrapper">
-      <router-link class="button" :to="'/dinamic-routes'">
-        <button class="button">Вернуться назад</button>
-      </router-link>
+      <button @click="backToCars" class="button">Вернуться назад</button>
 
       <!-- СЮДА ДОБАВИТЬ КНОПКУ "ПОКАЗАТЬ ПОЛНУЮ ИНФОРМАЦИЮ" -->
+      <router-link class="button" :to="{ name: 'fullInfo', query: { model: model, year: year } }">
+        <button class="button">Показать полную информацию</button>
+      </router-link>
     </div>
     <hr />
     <br />
 
     <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -23,6 +25,14 @@ export default {
   methods: {
     backToCars() {
       this.$router.push('/dinamic-routes');
+    },
+  },
+  computed: {
+    model() {
+      return this.$route.query['model'];
+    },
+    year() {
+      return this.$route.query['year'];
     },
   },
 };

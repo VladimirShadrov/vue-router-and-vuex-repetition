@@ -4,9 +4,14 @@
     <br />
 
     <nav>
-      <router-link v-for="car in cars" :key="car.id" :to="`/dinamic-routes/car/${car.model}`" class="link" active-class="link__active">{{
-        car.model
-      }}</router-link>
+      <router-link
+        v-for="car in cars"
+        :key="car.id"
+        :to="{ name: 'car', params: { id: car['model'] }, query: { model: car['model'], year: car['year'] } }"
+        class="link"
+        active-class="link__active"
+        >{{ car.model }}</router-link
+      >
     </nav>
     <router-view></router-view>
   </div>
@@ -40,9 +45,6 @@ export default {
         },
       ],
     };
-  },
-  mounted() {
-    console.log('Route: ', this.$route);
   },
 };
 </script>

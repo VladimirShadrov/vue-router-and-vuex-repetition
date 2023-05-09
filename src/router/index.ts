@@ -40,6 +40,14 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'car/:id',
         component: AppCarDinamic,
+        name: 'car',
+        children: [
+          {
+            path: 'full',
+            component: AppCarFullInfo,
+            name: 'fullInfo',
+          },
+        ],
       },
     ],
   },
