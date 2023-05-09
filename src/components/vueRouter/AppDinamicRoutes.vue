@@ -3,7 +3,12 @@
     <h1 class="theme-title">Динамические роуты</h1>
     <br />
 
-    <nav></nav>
+    <nav>
+      <router-link v-for="car in cars" :key="car.id" :to="`/dinamic-routes/car/${car.model}`" class="link" active-class="link__active">{{
+        car.model
+      }}</router-link>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -35,6 +40,9 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    console.log('Route: ', this.$route);
   },
 };
 </script>
