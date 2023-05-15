@@ -107,6 +107,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/page3',
     component: AppPage3,
   },
+  {
+    path: '/:pathMatch(.*)*',
+    component: App404Page,
+  },
 ];
 
 const router = createRouter({
