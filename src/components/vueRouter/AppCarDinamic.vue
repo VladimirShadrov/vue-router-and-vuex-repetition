@@ -4,7 +4,7 @@
     <br />
 
     <div class="buttons__wrapper">
-      <button class="button">Вернуться назад</button>
+      <button @click="backToCars" class="button">Вернуться назад</button>
 
       <!-- СЮДА ДОБАВИТЬ КНОПКУ "ПОКАЗАТЬ ПОЛНУЮ ИНФОРМАЦИЮ" -->
     </div>
@@ -18,6 +18,11 @@
 <script>
 export default {
   name: 'app-car-dinamic',
+  methods: {
+    backToCars() {
+      this.$router.push('/dinamic-routes');
+    },
+  },
 };
 </script>
 
