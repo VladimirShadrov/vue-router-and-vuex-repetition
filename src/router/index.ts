@@ -36,20 +36,6 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/dinamic-routes',
     component: AppDinamicRoutes,
-    children: [
-      {
-        path: 'car/:id',
-        component: AppCarDinamic,
-        name: 'car',
-        children: [
-          {
-            path: 'fullInfo',
-            component: AppCarFullInfo,
-            name: 'fullInfo',
-          },
-        ],
-      },
-    ],
   },
   {
     path: '/composition',
@@ -107,23 +93,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/page3',
     component: AppPage3,
   },
-  {
-    path: '/:pathMatch(.*)*',
-    component: App404Page,
-  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to) {
-    if (to.hash) {
-      return {
-        el: '#fullInfo',
-        behavior: 'smooth',
-      };
-    }
-  },
 });
 
 export default router;
