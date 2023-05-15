@@ -41,6 +41,13 @@ const routes: Array<RouteRecordRaw> = [
         path: 'car/:id',
         component: AppCarDinamic,
         name: 'car',
+        children: [
+          {
+            path: 'fullInfo',
+            component: AppCarFullInfo,
+            name: 'fullInfo',
+          },
+        ],
       },
     ],
   },
@@ -105,6 +112,14 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: '#fullInfo',
+        behavior: 'smooth',
+      };
+    }
+  },
 });
 
 export default router;

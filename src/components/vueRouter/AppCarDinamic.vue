@@ -7,11 +7,15 @@
       <button @click="backToCars" class="button">Вернуться назад</button>
 
       <!-- СЮДА ДОБАВИТЬ КНОПКУ "ПОКАЗАТЬ ПОЛНУЮ ИНФОРМАЦИЮ" -->
+      <router-link class="button" :to="{ name: 'fullInfo', query: { model: $route.query.model, year: $route.query.year } }">
+        <button class="button">ПОКАЗАТЬ ПОЛНУЮ ИНФОРМАЦИЮ</button>
+      </router-link>
     </div>
     <hr />
     <br />
 
     <!-- СЮДА ОТРИСОВАТЬ ПОЛНУЮ ИНФОРМАЦИЮ О МАШИНЕ -->
+    <router-view />
   </div>
 </template>
 
