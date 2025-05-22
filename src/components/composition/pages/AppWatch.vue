@@ -19,15 +19,9 @@
     <hr />
     <br />
 
-    <div class="item">
-      Название: <b> {{ title }} </b>
-    </div>
-    <div class="item">
-      Версия: <b> {{ version }}.</b>
-    </div>
-    <div class="item">
-      Удвоенная версия: <b> {{ dubleVersion }} </b>
-    </div>
+    <div class="item">Название: <b> {{}} </b></div>
+    <div class="item">Версия: <b> {{}}.</b></div>
+    <div class="item">Удвоенная версия: <b> {{}} </b></div>
     <br />
 
     <button @click="changeFrame" class="button">Изменить</button>
@@ -35,32 +29,7 @@
 </template>
 
 <script>
-import { ref, reactive, computed } from 'vue';
-
-export default {
-  setup() {
-    const title = ref('Vue');
-    const version = ref(3);
-
-    const dubleVersion = computed(() => version.value * 2);
-    const newFrame = reactive({
-      title: 'React',
-      version: 18,
-    });
-
-    function changeFrame() {
-      title.value = newFrame.title;
-      version.value = newFrame.version;
-    }
-
-    return {
-      title,
-      version,
-      dubleVersion,
-      changeFrame,
-    };
-  },
-};
+export default {};
 </script>
 
 <style scoped>
