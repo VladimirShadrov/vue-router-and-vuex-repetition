@@ -2,6 +2,7 @@
   <h1 class="theme-title">Объекты и реактивность</h1>
   <hr />
   <br />
+  <h4>Файл: AppObjects.vue</h4>
   <h3>
     Задача: <br />
     - Сделать отдельный объект по фреймворку и его версии <br />
@@ -21,12 +22,8 @@
     <hr />
     <br />
 
-    <div class="item">
-      Название: <b> {{}} </b>
-    </div>
-    <div class="item">
-      Версия: <b> {{}} </b>
-    </div>
+    <div class="item">Название: <b> {{}} </b></div>
+    <div class="item">Версия: <b> {{}} </b></div>
     <br />
 
     <button class="button">Изменить</button>

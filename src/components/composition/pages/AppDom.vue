@@ -2,6 +2,8 @@
   <h1 class="theme-title">Доступ к Dom элементам</h1>
   <hr />
   <br />
+  <h4>Файл: AppDom.vue</h4>
+
   <h3>
     Задача: <br />
     - Получить доступ к текстовому input <br />

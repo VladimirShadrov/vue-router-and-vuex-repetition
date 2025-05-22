@@ -2,6 +2,7 @@
   <h1 class="theme-title">Watch</h1>
   <hr />
   <br />
+  <h4>Файл: AppWatch.vue</h4>
   <h3>
     Задача: <br />
     - Реализовать метод watch, который следит за computed свойством <br />

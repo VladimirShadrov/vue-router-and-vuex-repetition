@@ -2,6 +2,8 @@
   <h1 class="theme-title">V-Model</h1>
   <hr />
   <br />
+  <h4>Файл: AppVModel.vue</h4>
+
   <h3>
     Задача: <br />
     - Связать текстовый input с моделью <br />
