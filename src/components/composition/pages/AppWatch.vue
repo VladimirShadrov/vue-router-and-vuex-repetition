@@ -24,7 +24,7 @@
     <div class="item">Удвоенная версия: <b> {{}} </b></div>
     <br />
 
-    <button @click="changeFrame" class="button">Изменить</button>
+    <button class="button">Изменить</button>
   </div>
 </template>
 
