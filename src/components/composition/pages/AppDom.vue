@@ -21,52 +21,23 @@
     <br />
 
     <div class="item">
-      Название: <b> {{ title }} </b>
+      Название: <b> {{}} </b>
     </div>
     <div class="item">
-      Версия: <b> {{ version }}.</b>
+      Версия: <b> {{}}.</b>
     </div>
     <div class="item">
-      Удвоенная версия: <b> {{ dubleVersion }} </b>
+      Удвоенная версия: <b> {{}} </b>
     </div>
     <br />
     <input ref="textInp" type="text" placeholder="Вывести введенное значение" style="padding: 4px 8px" /><br /><br />
 
-    <button @click="changeFrame" class="button">Изменить</button>
+    <button class="button">Изменить</button>
   </div>
 </template>
 
 <script>
-import { ref, reactive, computed } from 'vue';
-
-export default {
-  setup() {
-    const title = ref('Vue');
-    const version = ref(3);
-    const textInp = ref(null);
-
-    const dubleVersion = computed(() => version.value * 2);
-    const newFrame = reactive({
-      title: 'React',
-      version: 18,
-    });
-
-    function changeFrame() {
-      title.value = newFrame.title;
-      version.value = newFrame.version;
-
-      console.log(textInp.value.value);
-    }
-
-    return {
-      title,
-      version,
-      dubleVersion,
-      changeFrame,
-      textInp,
-    };
-  },
-};
+export default {};
 </script>
 
 <style scoped>
