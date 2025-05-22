@@ -20,17 +20,11 @@
     <hr />
     <br />
 
-    <div class="item">
-      Название: <b> {{}} </b>
-    </div>
-    <div class="item">
-      Версия: <b> {{}}.</b>
-    </div>
-    <div class="item">
-      Удвоенная версия: <b> {{}} </b>
-    </div>
+    <div class="item">Название: <b> {{}} </b></div>
+    <div class="item">Версия: <b> {{}}.</b></div>
+    <div class="item">Удвоенная версия: <b> {{}} </b></div>
     <br />
-    <input ref="textInp" type="text" placeholder="Вывести введенное значение" style="padding: 4px 8px" /><br /><br />
+    <input type="text" placeholder="Вывести введенное значение" style="padding: 4px 8px" /><br /><br />
 
     <button class="button">Изменить</button>
   </div>
